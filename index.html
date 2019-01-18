@@ -1,160 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+<!--
+<script>
+function myFunction() {
+  document.getElementById("test").innerHTML = "Hello World";
+}
+</script>
+-->
+
+	<!-- <h6>1234</h6> Debugger-->
+</head>
 <title>IAT 343</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
-</style>
+<link rel="stylesheet" type = "text/css" href = "style.css">
+<script src = "index.js">
+</script>
 <body>
-
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-  <div class="w3-container">
-    <h3 class="w3-padding-64"><b>IAT<br>343</b></h3>
-  </div>
-  <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="#image" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Image</a> 
-    <a href="#script" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Script</a> 
-    <a href="#people" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">People</a> 
-    <a href="#video" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Video</a>
-  </div>
-</nav>
-
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-  <span>IAT 343 Team 16</span>
-</header>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
-
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="showcase">
-    <h1 class="w3-jumbo"><b>Team 16</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>Image?</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-  </div>
-  
-  <!-- Photo grid (modal) -->
-  <div class="w3-row-padding">
-    <div class="w3-half">
-      <img src="" style="width:100%" onclick="onClick(this)" alt="Image1">
-      <img src="" style="width:100%" onclick="onClick(this)" alt="Image2">
-      <img src="" style="width:100%" onclick="onClick(this)" alt="Image3">
-    </div>
-
-    <div class="w3-half">
-      <img src="" style="width:100%" onclick="onClick(this)" alt="Image4">
-      <img src="" style="width:100%" onclick="onClick(this)" alt="Image5">
-      <img src="" style="width:100%" onclick="onClick(this)" alt="Image6">
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>IAT</b>343</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#script" class="w3-bar-item w3-button">Script</a>
+      <a href="#people" class="w3-bar-item w3-button">People</a>
+      <a href="#Video" class="w3-bar-item w3-button">Video</a>
+	  <a href="#chat" class="w3-bar-item w3-button">Online chatting</a>
     </div>
   </div>
-
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
-  </div>
-
-  <!-- Services -->
-  <div class="w3-container" id="services" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Script</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Story title</p>
-    <p>Detail
-    </p>
-  </div>
-  
-  <!-- Designers -->
-  <div class="w3-container" id="designers" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>People</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>IAT 343 Team 16</p>
-    <p>Team introduction?
-    </p>
-    <p><b>Members:</b>:</p>
-  </div>
-
-  <!-- The Team -->
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="" alt="name1" style="width:100%">
-        <div class="w3-container">
-          <h3>Name1</h3>
-          <p class="w3-opacity">Skill2</p>
-          <p>Hi1</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="" alt="name2" style="width:100%">
-        <div class="w3-container">
-          <h3>Name2</h3>
-          <p class="w3-opacity">Skill2</p>
-          <p>Hi2</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="" alt="name3" style="width:100%">
-        <div class="w3-container">
-          <h3>Name3</h3>
-          <p class="w3-opacity">Skill3</p>
-          <p>Hi3</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Video -->
-  <div class="w3-container" id="contact" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Video</b></h1>  
-  </div>
-
-<!-- End page content -->
 </div>
 
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">HTML Credit to <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="image/Background.jpg" alt="CMPT" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Team</b></span> <span class="w3-hide-small w3-text-light-grey">16</span></h1>
+  </div>
+</header>
 
-<script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-</script>
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="script">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Script</h3>
+  </div>
+
+  <div>
+    <p>Script Here!</p>
+  </div>
+	<!--
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">1</div>
+        <img src="/w3images/house2.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">2</div>
+        <img src="/w3images/house5.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">3</div>
+        <img src="/w3images/house4.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">4</div>
+        <img src="/w3images/house3.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+  </div>
+	-->
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="people">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">People</h3>
+    <p>Introction about the team?
+    </p>
+  </div>
+
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="image/Danielsong/DS.jpg" alt="DanielS" style="width:100%">
+      <h3>Daniel Song</h3>
+      <p class="w3-opacity">Web designer</p>
+      <p>CMPT student in SFU. Research interests are web front/back end design, internet safety and crypography.</p>
+      <p><form>
+		<input class="w3-button w3-light-grey w3-block"  type="button" value="Contact" onclick="window.location.href='https://www.facebook.com/daniel.song.31'" />
+		</form> </p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="image/Michaelsu/Michaelsu.jpg" alt="MichaelS" style="width:100%">
+      <h3>Michael Su</h3>
+      <p class="w3-opacity">IAT?</p>
+      <p>Hi2</p>
+      <p><form>
+		<input class="w3-button w3-light-grey w3-block"  type="button" value="Contact" onclick="window.location.href='https://www.facebook.com/profile.php?id=100005019407924'" />
+		</form> </p>
+    </div>
+	<div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="image/Kellywong/Kelly.jpg" alt="KellyW" style="width:100%">
+      <h3>Kelly Wong</h3>
+      <p class="w3-opacity">IAT?</p>
+      <p>H3</p>
+      <p><form>
+		<input class="w3-button w3-light-grey w3-block"  type="button" value="Contact" onclick="window.location.href='https://www.facebook.com/kellywonggg'" />
+		</form> </p>
+    </div>
+	
+	<div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="image/Kenzheomarali/Kenzhe.jpg" alt="KenzheO" style="width:100%">
+      <h3>Kenzhe Omarali</h3>
+      <p class="w3-opacity">IAT?</p>
+      <p>H4</p>
+      <p><form>
+		<input class="w3-button w3-light-grey w3-block"  type="button" value="Contact" onclick="window.location.href='https://www.facebook.com/profile.php?id=100010399392197'" />
+		</form> </p>
+    </div>
+  </div>
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="video">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Video</h3>
+    <p>Here is our video!</p>
+	<video width="320" height="240" controls>
+	  <source src="" type="video/mp4">
+	  <source src="" type="video/ogg">
+	  Your browser does not support the video tag.
+	</video>
+	<p>Youtube Version</p>
+	<iframe width="420" height="315"
+		src="">
+	</iframe> 
+  </div>
+  
+    <!-- Chat Section -->
+  <div class="w3-container w3-padding-32" id="chat">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Chatting room</h3>
+    <p>We love to meet new people and welcome to our online chatting!</p>
+    <form action="chat.html" target="_blank">
+      <input id = "Chatn" class="w3-input w3-border" type="text" placeholder="ChatID" required name="Name">
+      <input id = "ChatE" class="w3-input w3-section w3-border" type="text" placeholder="ChatEmail" required name="Email">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> Join
+      </button>
+    </form>
+  </div>
+  
+<!-- Image of location/map -->
+<div class="w3-container">
+  <img src="image/EndingBG.jpg" class="w3-image" style="width:100%">
+</div>
+
+<!-- End page content -->
+<!--
+</div>
+<p id="test">Test</p
+-->
+<!--
+<button class="w3-button w3-black w3-section" type="submit" onclick = "myFunction()">
+	<i class="fa fa-paper-plane"></i> Test
+</button>
+-->
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Thanks to <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
 
 </body>
 </html>
