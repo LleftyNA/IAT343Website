@@ -25,17 +25,20 @@ function myFunction() {
     <a href="#home" class="w3-bar-item w3-button"><b>IAT</b>343</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a href="#script" class="w3-bar-item w3-button">Script</a>
-      <a href="#people" class="w3-bar-item w3-button">People</a>
-      <a href="#Video" class="w3-bar-item w3-button">Video</a>
-	  <a href="#chat" class="w3-bar-item w3-button">Online chatting</a>
+	  <a href="index.html"  class="w3-bar-item w3-button">Home</a>
+      <a href="script.html"  class="w3-bar-item w3-button">Script</a>
+      <a href="people.html" class="w3-bar-item w3-button">People</a>
+	  <a href="concepts.html" class="w3-bar-item w3-button">Chararacter/Environment Concepts</a>
+	  <a href="storyboard.html" class="w3-bar-item w3-button">Pitched Storyboard</a>
+	  <a href="draft.html" class="w3-bar-item w3-button">Draft Animation</a>
+	  <a href="final.html" class="w3-bar-item w3-button">Final Animation</a>
     </div>
   </div>
 </div>
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="image/Background.jpg" alt="CMPT" width="1500" height="800">
+  <img class="w3-image" src="image/Background.jpg" alt="CMPT" width="1500" height="1000">
   <div class="w3-display-middle w3-margin-top w3-center">
     <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Team</b></span> <span class="w3-hide-small w3-text-light-grey">16</span></h1>
   </div>
@@ -44,14 +47,6 @@ function myFunction() {
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
 
-  <!-- Project Section -->
-  <div class="w3-container w3-padding-32" id="script">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Script</h3>
-  </div>
-
-  <div>
-    <p>Script Here!</p>
-  </div>
 	<!--
   <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
@@ -80,84 +75,6 @@ function myFunction() {
     </div>
   </div>
 	-->
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32" id="people">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">People</h3>
-    <p>Introction about the team?
-    </p>
-  </div>
-
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="image/Danielsong/DS.jpg" alt="DanielS" style="width:100%">
-      <h3>Daniel Song</h3>
-      <p class="w3-opacity">Web designer</p>
-      <p>CMPT student in SFU. Research interests are web front/back end design, internet safety and crypography.</p>
-      <p><form>
-		<input class="w3-button w3-light-grey w3-block"  type="button" value="Contact" onclick="window.location.href='https://www.facebook.com/daniel.song.31'" />
-		</form> </p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="image/Michaelsu/Michaelsu.jpg" alt="MichaelS" style="width:100%">
-      <h3>Michael Su</h3>
-      <p class="w3-opacity">IAT?</p>
-      <p>Hi2</p>
-      <p><form>
-		<input class="w3-button w3-light-grey w3-block"  type="button" value="Contact" onclick="window.location.href='https://www.facebook.com/profile.php?id=100005019407924'" />
-		</form> </p>
-    </div>
-	<div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="image/Kellywong/Kelly.jpg" alt="KellyW" style="width:100%">
-      <h3>Kelly Wong</h3>
-      <p class="w3-opacity">IAT?</p>
-      <p>H3</p>
-      <p><form>
-		<input class="w3-button w3-light-grey w3-block"  type="button" value="Contact" onclick="window.location.href='https://www.facebook.com/kellywonggg'" />
-		</form> </p>
-    </div>
-	
-	<div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="image/Kenzheomarali/Kenzhe.jpg" alt="KenzheO" style="width:100%">
-      <h3>Kenzhe Omarali</h3>
-      <p class="w3-opacity">IAT?</p>
-      <p>H4</p>
-      <p><form>
-		<input class="w3-button w3-light-grey w3-block"  type="button" value="Contact" onclick="window.location.href='https://www.facebook.com/profile.php?id=100010399392197'" />
-		</form> </p>
-    </div>
-  </div>
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-32" id="video">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Video</h3>
-    <p>Here is our video!</p>
-	<video width="320" height="240" controls>
-	  <source src="" type="video/mp4">
-	  <source src="" type="video/ogg">
-	  Your browser does not support the video tag.
-	</video>
-	<p>Youtube Version</p>
-	<iframe width="420" height="315"
-		src="">
-	</iframe> 
-  </div>
-  
-    <!-- Chat Section -->
-  <div class="w3-container w3-padding-32" id="chat">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Chatting room</h3>
-    <p>We love to meet new people and welcome to our online chatting!</p>
-    <form action="chat.html" target="_blank">
-      <input id = "Chatn" class="w3-input w3-border" type="text" placeholder="ChatID" required name="Name">
-      <input id = "ChatE" class="w3-input w3-section w3-border" type="text" placeholder="ChatEmail" required name="Email">
-      <button class="w3-button w3-black w3-section" type="submit">
-        <i class="fa fa-paper-plane"></i> Join
-      </button>
-    </form>
-  </div>
-  
-<!-- Image of location/map -->
-<div class="w3-container">
-  <img src="image/EndingBG.jpg" class="w3-image" style="width:100%">
-</div>
 
 <!-- End page content -->
 <!--
