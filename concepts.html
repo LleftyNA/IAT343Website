@@ -2,18 +2,88 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" type = "text/css" href = "style.css">
-<script src = "index.js">
+<script>
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+} 
 </script>
+
 <style>
-body {
+.topnav {
+	display: none;
+} 
+
+/* Smartphone Portrait and Landscape */ 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px){ 
+  .topnav {display: inline;}
 }
-.center {
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: white;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #FFFFFF;
+  color: white;
+} 
+
+.Button{
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.center{
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-} 
+}
 </style>
+
+<body>
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
@@ -27,6 +97,30 @@ body {
 	  <a href="storyboard.html" class="w3-bar-item w3-button">Storyboard</a>
 	  <a href="draft.html" class="w3-bar-item w3-button">Draft Animation</a>
 	  <a href="final.html" class="w3-bar-item w3-button">Final Animation</a>
+	  
+	  
+	  
+	  
+	  <!-- Mobile -->
+		<div class="topnav">
+		  <a href="#home" class="active">1</a>
+		  <!-- Navigation links (hidden by default) -->
+		  <div id="myLinks">
+		  <a href="index.html"  class="w3-bar-item w3-button">Home</a> <br/> <br/>
+		  <a href="people.html" class="w3-bar-item w3-button">People</a> <br/> <br/>
+		  <a href="script.html"  class="w3-bar-item w3-button">Script</a> <br/> <br/>
+		  <a href="concepts.html" class="w3-bar-item w3-button">Chararacter/<br/>Environment</a>
+		  <a href="storyboard.html" class="w3-bar-item w3-button">Storyboard</a>
+		  <a href="draft.html" class="w3-bar-item w3-button">Draft Animation</a>
+		  <a href="final.html" class="w3-bar-item w3-button">Final Animation</a>
+		  </div>
+		  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<div class = "Button"></div>
+			<div class = "Button"></div>
+			<div class = "Button"></div>
+		  </a>
+		</div> 
     </div>
   </div>
 </div>
