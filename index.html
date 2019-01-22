@@ -30,24 +30,6 @@ function myFunction() {
 </script>
 
 <style>
-.topnav {
-
-display: none;} 
-
-  /* Smartphone Portrait and Landscape */ 
-  @media only screen 
-    and (min-device-width : 320px) 
-    and (max-device-width : 480px){ 
-      .topnav {display: inline;}
-  }
-  
-#hideonphone { display: inline; } 
-
-/* Smartphone Portrait and Landscape */ 
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px){ 
-#hideonphone { display: none;}
 
 /* Style the navigation menu */
 .topnav {
@@ -97,13 +79,29 @@ and (max-device-width : 480px){
   background-color: black;
   margin: 6px 0;
 }
+
+#moveup{
+	position: relative;
+	top: -50px;
+	left: -50px;
+}
+
+.topnav{
+	position: relative;
+	top: -10px;
+}
 </style>
 
 <body>
 <!-- Navbar (sit on top) -->
-<!-- Mobile -->
+
+<div class="w3-top" id = "hideonphone">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>IAT</b>343</a>
+    <!-- Float links to the right. Hide them on small screens -->
+		<!-- Mobile -->
 <div class="topnav">
-	<a href="#home" class="active">IAT 343</a>
+	<a href="#home" class="active"><br /></a>
 	<!-- Navigation links (hidden by default) -->
 	<div id="myLinks">
 		<a href="index.html"  class="w3-bar-item w3-button">Home</a> <br/> <br/>
@@ -121,13 +119,7 @@ and (max-device-width : 480px){
 		<div class = "Button"></div>
 	</a>
 </div> 
-
-<div class="w3-top" id = "hideonphone">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>IAT</b>343</a>
-    <!-- Float links to the right. Hide them on small screens -->
-		
-    <div class="w3-right w3-hide-small">
+    <div class="w3-right w3-hide-small" id = "moveup">
 	  <a href="index.html"  class="w3-bar-item w3-button">Home</a>
 	  <a href="people.html" class="w3-bar-item w3-button">People</a>
       <a href="script.html"  class="w3-bar-item w3-button">Script</a>
