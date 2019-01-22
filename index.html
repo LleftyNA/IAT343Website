@@ -90,6 +90,22 @@ function myFunction() {
 	position: relative;
 	top: -10px;
 }
+
+.w3-image{
+	position: relative;
+	top:-130px;
+
+}
+
+#home{
+	position: relative;
+	top:-130px;
+}
+
+#people{
+	position: relative;
+	top:-300px;
+}
 </style>
 
 <body>
@@ -105,7 +121,6 @@ function myFunction() {
 	<!-- Navigation links (hidden by default) -->
 	<div id="myLinks">
 		<a href="index.html"  class="w3-bar-item w3-button">Home</a> <br/> <br/>
-		<a href="people.html" class="w3-bar-item w3-button">People</a> <br/> <br/>
 		<a href="script.html"  class="w3-bar-item w3-button">Script</a> <br/> <br/>
 		<a href="concepts.html" class="w3-bar-item w3-button">Chararacter/<br/>Environment</a><br/> <br/>  <br/>
 		<a href="storyboard.html" class="w3-bar-item w3-button">Storyboard</a> <br/> <br/>
@@ -121,7 +136,6 @@ function myFunction() {
 </div> 
     <div class="w3-right w3-hide-small" id = "moveup">
 	  <a href="index.html"  class="w3-bar-item w3-button">Home</a>
-	  <a href="people.html" class="w3-bar-item w3-button">People</a>
       <a href="script.html"  class="w3-bar-item w3-button">Script</a>
 	  <a href="concepts.html" class="w3-bar-item w3-button">Chararacter/Environment Concepts</a>
 	  <a href="storyboard.html" class="w3-bar-item w3-button">Storyboard</a>
@@ -142,8 +156,41 @@ function myFunction() {
   </div>
 </header>
 
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
+<div class="w3-container w3-padding-32" id="people">
+	<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Team</h3>
+</div>
+
+<div class="w3-row-padding w3-grayscale" id = "people">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="image/Danielsong/DS.jpg" alt="DanielS" style="width:100%">
+      <h3>Daniel Song</h3>
+      <p><form>
+		<input class="w3-button w3-light-grey w3-block"  type="button" value="Contact" onclick="window.location.href='https://www.facebook.com/daniel.song.31'" />
+		</form> </p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="image/Michaelsu/Michaelsu.jpg" alt="MichaelS" style="width:100%">
+      <h3>Michael Su</h3>
+      <p><form>
+		<input class="w3-button w3-light-grey w3-block"  type="button" value="Contact" onclick="window.location.href='https://www.facebook.com/profile.php?id=100005019407924'" />
+		</form> </p>
+    </div>
+	<div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="image/Kellywong/Kelly.jpg" alt="KellyW" style="width:100%">
+      <h3>Kelly Wong</h3>
+      <p><form>
+		<input class="w3-button w3-light-grey w3-block"  type="button" value="Contact" onclick="window.location.href='https://www.facebook.com/kellywonggg'" />
+		</form> </p>
+    </div>
+	
+	<div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="image/Kenzheomarali/Kenzhe.jpg" alt="KenzheO" style="width:100%">
+      <h3>Kenzhe Omarali</h3>
+      <p><form>
+		<input class="w3-button w3-light-grey w3-block"  type="button" value="Contact" onclick="window.location.href='https://www.facebook.com/profile.php?id=100010399392197'" />
+		</form> </p>
+    </div>
+  </div>
 
 	<!--
   <div class="w3-row-padding">
