@@ -16,7 +16,6 @@ function myFunction() {
 
 <style>
 
-
 /* Style the navigation menu */
 .topnav {
   overflow: hidden;
@@ -43,7 +42,7 @@ function myFunction() {
   background: white;
   display: block;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
 }
 
@@ -56,7 +55,7 @@ function myFunction() {
 /* Style the active link (or home/logo) */
 .active {
   background-color: #FFFFFF;
-  color: white;
+  color: black;
 } 
 
 .Button{
@@ -65,15 +64,47 @@ function myFunction() {
   background-color: black;
   margin: 6px 0;
 }
+
+#moveup{
+	position: relative;
+	top: -50px;
+	left: -50px;
+}
+
+.topnav{
+	position: relative;
+	top: -10px;
+}
 </style>
 
 <body>
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
+
+<div class="w3-top" id = "hideonphone">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
     <a href="#home" class="w3-bar-item w3-button"><b>IAT</b>343</a>
     <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
+		<!-- Mobile -->
+<div class="topnav">
+	<a href="#home" class="active"><br /></a>
+	<!-- Navigation links (hidden by default) -->
+	<div id="myLinks">
+		<a href="index.html"  class="w3-bar-item w3-button">Home</a> <br/> <br/>
+		<a href="people.html" class="w3-bar-item w3-button">People</a> <br/> <br/>
+		<a href="script.html"  class="w3-bar-item w3-button">Script</a> <br/> <br/>
+		<a href="concepts.html" class="w3-bar-item w3-button">Chararacter/<br/>Environment</a><br/> <br/>  <br/>
+		<a href="storyboard.html" class="w3-bar-item w3-button">Storyboard</a> <br/> <br/>
+		<a href="draft.html" class="w3-bar-item w3-button">Draft Animation</a> <br/> <br/>
+		<a href="final.html" class="w3-bar-item w3-button">Final Animation</a> <br/> <br/>
+	</div>
+	<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		<div class = "Button"></div>
+		<div class = "Button"></div>
+		<div class = "Button"></div>
+	</a>
+</div> 
+    <div class="w3-right w3-hide-small" id = "moveup">
 	  <a href="index.html"  class="w3-bar-item w3-button">Home</a>
 	  <a href="people.html" class="w3-bar-item w3-button">People</a>
       <a href="script.html"  class="w3-bar-item w3-button">Script</a>
@@ -81,30 +112,6 @@ function myFunction() {
 	  <a href="storyboard.html" class="w3-bar-item w3-button">Storyboard</a>
 	  <a href="draft.html" class="w3-bar-item w3-button">Draft Animation</a>
 	  <a href="final.html" class="w3-bar-item w3-button">Final Animation</a>
-	  
-	  
-	  
-	  
-	  <!-- Mobile -->
-		<div class="topnav">
-		  <a href="#home" class="active">1</a>
-		  <!-- Navigation links (hidden by default) -->
-		  <div id="myLinks">
-		  <a href="index.html"  class="w3-bar-item w3-button">Home</a> <br/> <br/>
-		  <a href="people.html" class="w3-bar-item w3-button">People</a> <br/> <br/>
-		  <a href="script.html"  class="w3-bar-item w3-button">Script</a> <br/> <br/>
-		  <a href="concepts.html" class="w3-bar-item w3-button">Chararacter/<br/>Environment</a>
-		  <a href="storyboard.html" class="w3-bar-item w3-button">Storyboard</a>
-		  <a href="draft.html" class="w3-bar-item w3-button">Draft Animation</a>
-		  <a href="final.html" class="w3-bar-item w3-button">Final Animation</a>
-		  </div>
-		  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-			<div class = "Button"></div>
-			<div class = "Button"></div>
-			<div class = "Button"></div>
-		  </a>
-		</div> 
     </div>
   </div>
 </div>
