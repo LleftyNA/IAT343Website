@@ -40,6 +40,14 @@ display: none;}
     and (max-device-width : 480px){ 
       .topnav {display: inline;}
   }
+  
+#hideonphone { display: inline; } 
+
+/* Smartphone Portrait and Landscape */ 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px){ 
+#hideonphone { display: none;}
 
 /* Style the navigation menu */
 .topnav {
@@ -113,7 +121,8 @@ display: none;}
 		<div class = "Button"></div>
 	</a>
 </div> 
-<div class="w3-top">
+
+<div class="w3-top" id = "hideonphone">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
     <a href="#home" class="w3-bar-item w3-button"><b>IAT</b>343</a>
     <!-- Float links to the right. Hide them on small screens -->
